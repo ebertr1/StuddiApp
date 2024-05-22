@@ -1,9 +1,9 @@
 class Cursa:
-    def __init__(self):
-        self.__estudiante = ''
-        self.__materia = ''
-        self.__unidad = ''
-        self.__periodo_academico = ''
+    def __init__(self, estudiante='', materia='', unidad='', periodo_academico=''):
+        self.__estudiante = estudiante
+        self.__materia = materia
+        self.__unidad = unidad
+        self.__periodo_academico = periodo_academico
 
 
     @property
