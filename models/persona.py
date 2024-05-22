@@ -1,22 +1,24 @@
-from models.enumTipoIdentificacion import EnumTipoIdentificacion
-
-class Persona:
+class Persona():
     def __init__(self):
         self.__id = 0
-        self.__apellidos = ''
-        self.__nombres = ''
+        self.__nombre = ''
         self.__dni = ''
+        self.__apellido = ''
         self.__direccion = ''
         self.__telefono = ''
-        self.__tipoIdentificacion = EnumTipoIdentificacion.CEDULA
+        self.__correo = ''
+        self.__nacimiento = ''
+        self.__rol = ''
 
     @property
-    def _tipoIdentificacion(self):
-        return self.__tipoIdentificacion
+    def _rol(self):
+        return self.__rol
 
-    @_tipoIdentificacion.setter
-    def _tipoIdentificacion(self, value):
-        self.__tipoIdentificacion = value
+    @_rol.setter
+    def _rol(self, value):
+        self.__rol = value
+
+      
 
     @property
     def _id(self):
@@ -27,20 +29,12 @@ class Persona:
         self.__id = value
 
     @property
-    def _apellidos(self):
-        return self.__apellidos
+    def _nombre(self):
+        return self.__nombre
 
-    @_apellidos.setter
-    def _apellidos(self, value):
-        self.__apellidos = value
-
-    @property
-    def _nombres(self):
-        return self.__nombres
-
-    @_nombres.setter
-    def _nombres(self, value):
-        self.__nombres = value
+    @_nombre.setter
+    def _nombre(self, value):
+        self.__nombre = value
 
     @property
     def _dni(self):
@@ -49,6 +43,14 @@ class Persona:
     @_dni.setter
     def _dni(self, value):
         self.__dni = value
+
+    @property
+    def _apellido(self):
+        return self.__apellido
+
+    @_apellido.setter
+    def _apellido(self, value):
+        self.__apellido = value
 
     @property
     def _direccion(self):
@@ -66,39 +68,41 @@ class Persona:
     def _telefono(self, value):
         self.__telefono = value
 
-    # def to_dict(self):
-    #     return {
-    #         'id': self.__id,
-    #         'apellidos': self.__apellidos,
-    #         'nombres': self.__nombres,
-    #         'dni': self.__dni,
-    #         'direccion': self.__direccion,
-    #         'telefono': self.__telefono,
-    #         'tipo_identificacion': self.__tipo_identificacion.value
-    #     }
-    
+
+    @property
+    def _nacimiento(self):
+        return self.__nacimiento
+
+    @_nacimiento.setter
+    def _nacimiento(self, value):
+        self.__nacimiento = value
+
+   
     @property
     def serializable(self):
-        return {
-            "id": self.__id,
-            "apellidos": self.__apellidos,
-            "nombres": self.__nombres,
-            "direccion": self.__direccion,
-            "dni": self.__dni,
-            "telefono": self.__telefono,
-            "tipo": self.__tipoIdentificacion
-        }
-    
-    def deserializar(data):
+     return{
+        'id': self._id,
+         'rol': self._rol,
+        'nombre': self._nombre,
+        'dni': self._dni,
+        'apellido': self._apellido,
+        'direccion': self._direccion,
+        'telefono': self._telefono,
+        'nacimiento': self._nacimiento,
+       
+     }
+    def deserializar(self, data):
         persona = Persona()
-        persona._id = data["id"]
-        persona._apellidos = data["apellidos"]
-        persona._nombres = data["nombres"]
-        persona._direccion = data["direccion"]
-        persona._dni = data["dni"]
-        persona._telefono = data["telefono"]
-        persona._tipoIdentificacion = data["tipo"]
-        return persona
         
-    def __str__(self) -> str:
-        return self.__apellidos + "" + self.__nombres
+        persona._id = data['id']
+        persona._rol = data['rol']
+        persona._nombre = data['nombre']
+        persona._dni = data['dni']
+        persona._apellido = data['apellido']
+        persona._direccion = data['direccion']
+        persona._telefono = data['telefono']
+        persona._nacimiento = data['nacimiento']
+      
+        return persona
+
+  
