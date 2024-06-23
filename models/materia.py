@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Materia:
     def __init__(self):
         self.__id = 0
@@ -65,18 +65,3 @@ class Materia:
         self.__descripcion = data['descripcion']
         self.__cedulaDocente = data['cedula_docente']
         return self
-=======
-from models.enumCodigo import EnumCodigo
-class Materia:
-    def __init__(self):
-        self.__nombre=''
-        self.__codigo=EnumCodigo.CODIGO
-        
-    @property
-    def _codigo(self):
-        return self.__codigo
-
-    @__codigo.setter
-    def _codigo(self, value):
-        self.__codigo = value
->>>>>>> origin/branch_Isa
