@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "rol": "Administrador",
+        "nombre": "Anthony Fernando",
+        "dni": "12020280",
+        "apellido": "Gutierrez Gutierre",
+        "direccion": "Ciudad Victoria",
+        "telefono": "0997288985",
+        "nacimiento": "1999-12-12"
+    },
+    {
+        "id": 2,
+        "rol": "Estudiante",
+        "nombre": "Eber Daniel",
+        "dni": "12020280",
+        "apellido": "Guayllas Poma",
+        "direccion": "CVicentino",
+        "telefono": "123456",
+        "nacimiento": "1999-12-12"
+    },
+    {
+        "id": 3,
+        "rol": "Profesor",
+        "nombre": "Ariana Sophia",
+        "dni": "12020280",
+        "apellido": "Sarango Tandazo",
+        "direccion": "Loja",
+        "telefono": "123456",
+        "nacimiento": "1999-12-12"
+    }
+]
