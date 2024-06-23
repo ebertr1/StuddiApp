@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from config import config
 
 # Crear la aplicación Flask
-app = Flask(__name__, template_folder='../templates')
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 # Configurar la aplicación desde el objeto de configuración
 app.config.from_object(config['development'])
