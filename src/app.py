@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from config import config
 
-app = Flask(__name__)
+# Crear la aplicación Flask
+app = Flask(__name__, template_folder='../templates')
+
+# Configurar la aplicación desde el objeto de configuración
 app.config.from_object(config['development'])
 
-
+# Definir las rutas
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -22,5 +23,6 @@ def login():
     else:
         return render_template('login.html')
 
+# Punto de entrada para ejecutar la aplicación
 if __name__ == '__main__':
     app.run(debug=True)
