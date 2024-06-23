@@ -10,10 +10,12 @@ body {
     align-items: center; /* Alinea verticalmente los elementos */
     justify-content: space-between; /* Espacio uniforme entre los elementos */
     padding: 25px; /* Añade espacio alrededor del encabezado */
-    background-image: url("/assets/img/fondo.jpg"); /* Establece la imagen de fondo del encabezado */
+    background-image: url("/static/img/fondo.jpg"); /* Asegúrate de que la ruta sea correcta */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el encabezado */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: #d0d7da; /* Color de texto en el encabezado */
     width: 100%; /* Ajusta el ancho del encabezado al 100% */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total del elemento */
 }
 
 .logo-left {
@@ -31,9 +33,10 @@ body {
     max-width: 400px; /* Ancho máximo del contenedor */
     margin: 50px auto; /* Centro verticalmente el contenedor y lo posiciona en el centro horizontal de la página */
     background: #e9dddd; /* Color de fondo blanco */
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px; /* Ajusta el padding para un mejor espaciado */
+    border-radius: 10px; /* Bordes redondeados */
     text-align: center; /* Centra el contenido del contenedor horizontalmente */
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño total del elemento */
 }
 
 .container h2 {
@@ -45,7 +48,7 @@ body {
 input[type="text"],
 input[type="password"],
 select {
-    width: calc(100% - 40px); /* Reduce el ancho del campo de entrada y del select en 20px */
+    width: calc(100% - 40px); /* Reduce el ancho del campo de entrada y del select */
     padding: 9px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -54,8 +57,8 @@ select {
 }
 
 input[type="submit"] {
-    width: 200x;
-    padding: 12px;
+    width: 100%; /* Ajusta el ancho del botón */
+    padding: 12px; /* Espacio interior del botón */
     border: none;
     border-radius: 5px;
     background-color: #007bff; /* Color de botón más vibrante */

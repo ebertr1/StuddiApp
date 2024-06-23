@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,13 +7,14 @@
     <title>INICIA SESIÓN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Agrega Font Awesome -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
+    <from class="form-signin" action="/login" method="POST">
     <header class="header">
-        <img src="assets/img/logo_0.jpg" alt="Logo de la Universidad" class="logo-left">
+        <img src="static/img/logo_0.jpg" alt="Logo de la Universidad" class="logo-left">
         <h1>Bienvenido al Sistema de Seguimiento Estudiantil</h1>
-        <img src="assets/img/logo_1.jpg" alt="Logo de la Universidad" class="logo-right">
+        <img src="static/img/logo_1.jpg" alt="Logo de la Universidad" class="logo-right">
     </header>
     <div class="container">
         <h2>INICIA SESIÓN</h2>
